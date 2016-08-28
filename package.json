@@ -1,8 +1,8 @@
 {
-  "name": "insight-ui",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
+  "name": "insight-ui-zcash",
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zcash network and build your own services with it.",
   "version": "0.4.0",
-  "repository": "git://github.com/bitpay/insight-ui.git",
+  "repository": "git://github.com/str4d/insight-ui-zcash.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -23,22 +23,26 @@
     {
       "name": "Juan Ignacio Sosa Lopez",
       "email": "bechilandia@gmail.com"
+    },
+    {
+      "name": "Jack Grigg",
+      "email": "jack@z.cash"
     }
   ],
   "bugs": {
-    "url": "https://github.com/bitpay/insight-ui/issues"
+    "url": "https://github.com/str4d/insight-ui-zcash/issues"
   },
-  "homepage": "https://github.com/bitpay/insight-ui",
+  "homepage": "https://github.com/str4d/insight-ui-zcash",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "bitcoin",
+    "zcash",
     "bitcore",
     "front-end"
   ],
-  "bitcoreNode": "bitcore-node",
+  "bitcoreNode": "bitcore-node-zcash",
   "dependencies": {
   },
   "devDependencies": {
