@@ -21,14 +21,14 @@
 </div>
 <div class="row line-mid">
   <div class="col-md-12">
-    <div class="row" data-ng-if="!tx.vjoinsplit">
-      <div class="col-md-12 transaction-vin-vout" data-ng-repeat="vin in tx.vin">
+    <div class="row" data-ng-if="!tx.vjoinsplit || tx.vjoinsplit.length == 0">
+      <div class="col-md-12 transaction-vin-vout">
         <div class="ellipsis">
           <span translate>No JoinSplits</span>
         </div>
       </div>
     </div>
-    <div class="row" data-ng-if="tx.vjoinsplit">
+    <div class="row" data-ng-if="tx.vjoinsplit && tx.vjoinsplit.length != 0">
 
       <!-- <<< Simple view -->
       <div data-ng-if="!itemsExpanded" data-ng-init="currentJSNoExpanded=0; sizeJSNoExpanded=5">
