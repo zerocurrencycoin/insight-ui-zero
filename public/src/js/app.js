@@ -1,7 +1,9 @@
 'use strict';
 
+var netSymbol = 'ZEC';
+
 var defaultLanguage = localStorage.getItem('insight-language') || 'en';
-var defaultCurrency = localStorage.getItem('insight-currency') || 'ZEC';
+var defaultCurrency = localStorage.getItem('insight-currency') || netSymbol;
 
 angular.module('insight',[
   'ngAnimate',
