@@ -1,6 +1,6 @@
 'use strict';
 
-var netSymbol = 'TESTZEC';
+var netSymbol = 'TAZ';
 
 var defaultLanguage = localStorage.getItem('insight-language') || 'en';
 var defaultCurrency = localStorage.getItem('insight-currency') || netSymbol;
