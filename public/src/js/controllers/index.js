@@ -40,7 +40,7 @@ angular.module('insight.system').controller('IndexController',
 
     $scope.humanSince = function(time) {
       var m = moment.unix(time);
-      return m.max().fromNow();
+      return moment.min(m).fromNow();
     };
 
     $scope.index = function() {

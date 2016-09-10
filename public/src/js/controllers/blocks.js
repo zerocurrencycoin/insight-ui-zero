@@ -41,7 +41,7 @@ angular.module('insight.blocks').controller('BlocksController',
   $scope.humanSince = function(time) {
     var m = moment.unix(time).startOf('day');
     var b = moment().startOf('day');
-    return m.max().from(b);
+    return moment.min(m).from(b);
   };
 
 

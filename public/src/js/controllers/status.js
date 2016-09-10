@@ -19,7 +19,7 @@ angular.module('insight.status').controller('StatusController',
 
     $scope.humanSince = function(time) {
       var m = moment.unix(time / 1000);
-      return m.max().fromNow();
+      return moment.min(m).fromNow();
     };
 
     var _onSyncUpdate = function(sync) {
