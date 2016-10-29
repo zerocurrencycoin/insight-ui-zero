@@ -1,6 +1,7 @@
 'use strict';
 
-var netSymbol = 'ZEC';
+var testnet = false;
+var netSymbol = testnet ? 'TAZ' : 'ZEC';
 
 var defaultLanguage = localStorage.getItem('insight-language') || 'en';
 var defaultCurrency = localStorage.getItem('insight-currency') || netSymbol;
