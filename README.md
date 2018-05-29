@@ -18,7 +18,7 @@ cd mynode
 ./node_modules/bitcore-node-zero/bin/bitcore-node start
 ```
 
-Open a web browser to `http://localhost:3001/insight/`
+Open a web browser to `http://localhost:3001/insight-api-zero/`
 
 ## Development
 
