@@ -45,7 +45,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
       if (currency === 'USD') {
         Currency.get({}, function(res) {
-          $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
+          $rootScope.currency.factor = $rootScope.currency.binance = res.data.binance;
         });
       } else if (currency === 'm'+netSymbol) {
         $rootScope.currency.factor = 1000;
@@ -58,7 +58,7 @@ angular.module('insight.currency').controller('CurrencyController',
 
     // Get initial value
     Currency.get({}, function(res) {
-      $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
+      $rootScope.currency.factor = $rootScope.currency.binance = res.data.binance;
     });
 
   });
