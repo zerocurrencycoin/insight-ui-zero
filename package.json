@@ -1,8 +1,8 @@
 {
-  "name": "insight-ui-zcash",
+  "name": "insight-ui-zero",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zcash network and build your own services with it.",
   "version": "0.4.0",
-  "repository": "git://github.com/str4d/insight-ui-zcash.git",
+  "repository": "git://github.com/ProphetAlgorithms/insight-ui-zero.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -30,19 +30,19 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/str4d/insight-ui-zcash/issues"
+    "url": "https://github.com/ProphetAlgorithms/insight-ui-zero/issues"
   },
-  "homepage": "https://github.com/str4d/insight-ui-zcash",
+  "homepage": "https://github.com/str4d/insight-ui-zero",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "zcash",
+    "zero",
     "bitcore",
     "front-end"
   ],
-  "bitcoreNode": "bitcore-node-zcash",
+  "bitcoreNode": "bitcore-node-zero",
   "dependencies": {
   },
   "devDependencies": {
