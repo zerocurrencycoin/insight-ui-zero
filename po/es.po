@@ -22,29 +22,29 @@ msgstr "404 Página no encontrada :("
 
 #: public/views/index.html
 msgid ""
-"<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" target="
-"\"_blank\">open-source Zcash blockchain explorer</a> with complete REST "
+"<strong>insight zero</strong>  is an <a href=\"http://live.insight.is/\" target="
+"\"_blank\">open-source Zero blockchain explorer</a> with complete REST "
 "and websocket APIs that can be used for writing web wallets and other apps  "
 "that need more advanced blockchain queries than provided by zcashd RPC.  "
-"Check out the <a href=\"https://github.com/str4d/insight-ui-zcash\" target=\"_blank"
+"Check out the <a href=\"https://github.com/ProphetAlgorithms/insight-ui-zero\" target=\"_blank"
 "\">source code</a>."
 msgstr ""
-"<strong>insight</strong>  es un <a href=\"http://live.insight.is/\" target="
-"\"_blank\">explorador de bloques de Zcash open-source</a> con un completo "
+"<strong>insight zero</strong>  es un <a href=\"http://live.insight.is/\" target="
+"\"_blank\">explorador de bloques de Zero open-source</a> con un completo "
 "conjunto de REST y APIs de websockets que pueden ser usadas para escribir "
-"monederos de Zcashs y otras aplicaciones que requieran consultar un "
+"monederos de Zeros y otras aplicaciones que requieran consultar un "
 "explorador de bloques.  Obtén el código en <a href=\"http://github.com/"
 "bitpay/insight\" target=\"_blank\">el repositorio abierto de Github</a>."
 
 #: public/views/index.html
 msgid ""
-"<strong>insight</strong> is still in development, so be sure to report any "
+"<strong>insight zero</strong> is still in development, so be sure to report any "
 "bugs and provide feedback for improvement at our <a href=\"https://github."
 "com/bitpay/insight/issues\" target=\"_blank\">github issue tracker</a>."
 msgstr ""
-"<strong>insight</strong> esta en desarrollo aún, por ello agradecemos que "
+"<strong>insight zero</strong> esta en desarrollo aún, por ello agradecemos que "
 "nos reporten errores o sugerencias para mejorar el software. <a href="
-"\"https://github.com/str4d/insight-ui-zcash/issues\" target=\"_blank\">Github issue "
+"\"https://github.com/ProphetAlgorithms/insight-ui-zero/issues\" target=\"_blank\">Github issue "
 "tracker</a>."
 
 #: public/views/index.html
@@ -68,8 +68,8 @@ msgid "Best Block"
 msgstr "Mejor Bloque"
 
 #: public/views/status.html
-msgid "Zcash node information"
-msgstr "Información del nodo Zcash"
+msgid "Zero node information"
+msgstr "Información del nodo Zero"
 
 #: public/views/block.html
 msgid "Block"
