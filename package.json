@@ -2,7 +2,7 @@
   "name": "insight-ui-zero",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the zcash network and build your own services with it.",
   "version": "0.4.0",
-  "repository": "git://github.com/ProphetAlgorithms/insight-ui-zero.git",
+  "repository": "git://github.com/zerocurrencycoin/insight-ui-zero.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -30,9 +30,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/ProphetAlgorithms/insight-ui-zero/issues"
+    "url": "https://github.com/zerocurrencycoin/insight-ui-zero/issues"
   },
-  "homepage": "https://github.com/ProphetAlgorithms/insight-ui-zero",
+  "homepage": "https://github.com/zerocurrencycoin/insight-ui-zero",
   "license": "MIT",
   "keywords": [
     "insight",
