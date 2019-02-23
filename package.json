@@ -42,7 +42,7 @@
     "bitcore",
     "front-end"
   ],
-  "bitcoreNode": "bitcore-node-zero",
+  "bitcoreNode": "bitcore-node-zero#saplingroot",
   "dependencies": {
   },
   "devDependencies": {
