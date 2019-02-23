@@ -37,7 +37,7 @@
   </div>
   <div data-ng-if="block.hash">
     <div class="well well-sm ellipsis">
-      <strong>BlockHash</strong> 
+      <strong>BlockHash</strong>
       <span class="txid text-muted">{{block.hash}}</span>
       <span class="btn-copy" clip-copy="block.hash"></span>
     </div>
@@ -60,7 +60,7 @@
           <tr>
             <td><strong translate>Block Reward</strong></td>
             <td class="text-right text-muted">{{$root.currency.getConvertion(block.reward)}}</td>
-          </tr> 
+          </tr>
           <tr>
             <td><strong translate>Timestamp</strong></td>
             <td class="text-right text-muted">{{block.time * 1000 | date:'medium'}}</td>
@@ -77,6 +77,15 @@
               <div class="ellipsis">
                 <span class="btn-copy" clip-copy="block.merkleroot"></span>
                 <span>{{block.merkleroot}}</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Final Sapling Root</strong></td>
+            <td class="text-right text-muted">
+              <div class="ellipsis">
+                <span class="btn-copy" clip-copy="block.finalsaplingroot"></span>
+                <span>{{block.finalsaplingroot}}</span>
               </div>
             </td>
           </tr>
@@ -139,4 +148,3 @@
   </div>
 
 </section>
-
