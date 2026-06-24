@@ -1,99 +1,71 @@
-# Insight UI
+Insight UI (Zero)
+=================
 
-A Bitcoin blockchain explorer web application service for [Bitcore Node](https://github.com/bitpay/bitcore-node) using the [Insight API](https://github.com/str4d/insight-api-zcash).
+A Zero (ZER) blockchain explorer web application. `insight-ui-zero` is the
+AngularJS frontend of the Zero Insight stack; it runs as a service of
+`bitcore-node-zero` and reads its data from `insight-api-zero`.
 
-## Quick Start
+> Source-of-record copy. This README is the corrected version staged under
+> `error/insight-ui-zero/` in the Insight docs repo: Zero-accurate framing, the
+> correct landing path, Node v8.17.0, and only links that still resolve.
 
-Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Bitcore](https://github.com/bitpay/bitcore).
+Lineage: this is the Zero rename-fork of the Zcash Insight UI
+([str4d/insight-ui-zcash](https://github.com/str4d/insight-ui-zcash)), itself
+derived from BitPay's [bitcore-node](https://github.com/bitpay/bitcore-node)
+ecosystem.
 
-## Getting Started
+## Install
 
-To manually install all of the necessary components, you can run these commands:
+Insight UI is a Bitcore Node service. It is installed alongside the rest of the
+stack and enabled in the `bitcore-node-zero` configuration; you do not normally
+run it standalone. Once the node is running, the explorer is served at:
 
-```bash
-npm install zerocurrencycoin/insight-ui-zero
-./node_modules/bitcore-node-zero/bin/bitcore-node create mynode
-cd mynode
-./node_modules/bitcore-node-zero/bin/bitcore-node install zerocurrencycoin/insight-api-zero zerocurrencycoin/insight-ui-zero
-./node_modules/bitcore-node-zero/bin/bitcore-node start
+```
+http://localhost:3001/insight/
 ```
 
-Open a web browser to `http://localhost:3001/insight-api-zero/`
+(behind the production nginx it is served under `/insight/` on the public host.)
+
+## Configuration
+
+Insight UI is configured as a service entry in the Bitcore Node config
+(`bitcore-node.json`), pointing at the running `insight-api-zero` service for its
+data. The API base path and the node it talks to are set there; the UI itself has
+no separate runtime config beyond what the service block provides.
 
 ## Development
 
-To run Insight UI locally in development mode:
+To build and run from source:
 
-Install bower dependencies:
-
-```
-$ bower install
-```
-
-To compile and minify the web application's assets:
-
-```
-$ grunt compile
+```sh
+git clone https://github.com/zerocurrencycoin/insight-ui-zero
+cd insight-ui-zero
+npm install
+bower install
+grunt
 ```
 
-There is a convenient Gruntfile.js for automation during editing the code
+`grunt` compiles the Angular templates, styles, and the translation bundles, then
+watches for changes. Use the standard Bitcore Node dev flow to serve the built UI
+through a local node.
 
-```
-$ grunt
-```
+> Built under **Node.js v8.17.0** with the frozen 2021-era `bower`/`grunt`
+> toolchain that the rest of the Zero Insight stack uses. Newer Node is not
+> supported.
 
-## Multilanguage support
+## Multilanguage
 
-Insight UI uses [angular-gettext](http://angular-gettext.rocketeer.be) for multilanguage support.
+Translations use [angular-gettext](https://angular-gettext.rocketeer.be/).
+Translatable strings are extracted into `po/template.pot`; per-language `.po`
+files live under `po/`. Edit them with [Poedit](https://poedit.com/) or any
+gettext editor, then rebuild (`grunt`) to regenerate the compiled
+`js/translations.js` the app loads at runtime.
 
-To enable a text to be translated, add the ***translate*** directive to html tags. See more details [here](http://angular-gettext.rocketeer.be/dev-guide/annotate/). Then, run:
-
-```
-grunt compile
-```
-
-This action will create a template.pot file in ***po/*** folder. You can open it with some PO editor ([Poedit](http://poedit.net)). Read this [guide](http://angular-gettext.rocketeer.be/dev-guide/translate/) to learn how to edit/update/import PO files from a generated POT file. PO file will be generated inside po/ folder.
-
-If you make new changes, simply run **grunt compile** again to generate a new .pot template and the angular javascript ***js/translations.js***. Then (if use Poedit), open .po file and choose ***update from POT File*** from **Catalog** menu.
-
-Finally changes your default language from ***public/src/js/config***
-
-```
-gettextCatalog.currentLanguage = 'es';
-```
-
-This line will take a look at any *.po files inside ***po/*** folder, e.g.
-**po/es.po**, **po/nl.po**. After any change do not forget to run ***grunt
-compile***.
-
-
-## Note
-
-For more details about the [Insight API](https://github.com/str4d/insight-api-zcash) configuration and end-points, go to [Insight API GitHub repository](https://github.com/str4d/insight-api-zcash).
-
-## Contribute
-
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/str4d/insight-ui-zcash).
-
+To add a language: copy `po/template.pot` to `po/<lang>.po`, translate, and
+rebuild.
 
 ## License
-(The MIT License)
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Code released under the MIT license.
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright 2013-2015 BitPay, Inc.
