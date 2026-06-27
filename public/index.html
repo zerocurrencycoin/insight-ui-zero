@@ -12,8 +12,17 @@
 	<meta data-ng-if="currency.testnet" name="description" content="Zero Insight. View detailed information on all testnet zero transactions and block. {{ $root.title + $root.titleDetail }}">
 	<meta data-ng-if="!currency.testnet" name="description" content="Zero Insight. View detailed information on all zero transactions and block. {{ $root.title + $root.titleDetail }}">
 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<!-- SAMPLE (favicon): sized PNG icons; modern browsers pick by size, the
+	     .ico above stays as a legacy fallback. Files staged in samples/img/icons/,
+	     promote alongside this HTML. Remove these two lines to roll back. -->
+	<link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic">
 	<link rel="stylesheet" href="css/main.min.css">
+	<!-- SAMPLE (palette/type): additive Zero-theme override layered after
+	     main.min.css. No LESS, no grunt rebuild — re-tints existing selectors
+	     only. Remove this one line to roll back. -->
+	<link rel="stylesheet" href="css/custom.css">
 </head>
 <body ng-cloak class="ng-cloak">
   <div>

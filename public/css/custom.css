@@ -1,0 +1,41 @@
+/* samples/css/custom.css — Zero light "ice-blue" override.
+ * Layered after main.min.css; re-tints existing selectors only. */
+:root {
+  --zero-bg: #eef1f4;     /* page surface: faint cool grey-blue */
+  --zero-panel: #ffffff;
+  --zero-text: #1f2933;
+  --zero-muted: #6b7480;
+  --zero-line: #dbe4ec;
+  --zero-link: #1a5e9c;
+  --zero-link-h: #0f3f6e;
+}
+
+/* ---- base surface + type ------------------------------------------------ */
+/* !important on background beats main.min.css body{background:#fff} (else no visible change) */
+body { background: var(--zero-bg) !important; color: var(--zero-text); font-family: "Ubuntu", sans-serif; }
+h1, h2, h3, h4, .page-header { color: var(--zero-text); }
+.text-muted, .text-right small { color: var(--zero-muted) !important; }
+hr, .page-header { border-color: var(--zero-line); }
+
+/* ---- links: deep blue, darker on hover ---------------------------------- */
+a, a:visited { color: var(--zero-link); }
+a:hover, a:focus { color: var(--zero-link-h); }
+
+/* ---- navbar: plain buttons, white-on-black, invert on hover ------------- */
+/* Set BOTH bg and color: base stacks two conflicting half-rules on hover
+ * (Bootstrap's bg:transparent vs the Zero black-theme's bg:#fff, color unset),
+ * so pin both with !important to override deterministically. No .active state —
+ * the route directive never applies .active (see nav-active-state memo). */
+.navbar-default .navbar-nav > li > a { background-color: transparent !important; color: #fff !important; }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { background-color: #fff !important; color: #000 !important; }
+
+/* ---- panels / tables: lift base-grey surfaces to white off the ice-blue page */
+.panel, .well, #status .col-gray, .col-gray { background: var(--zero-panel); border-color: var(--zero-line); }
+.table > tbody > tr > td, .table > thead > tr > th { border-top-color: var(--zero-line); }
+
+/* ---- selected currency in the dropdown (base highlights li.active, but the
+ * markup puts .active on the <a>, so add our own) — faint blue wash --------- */
+.dropdown-menu > li > a.active, .dropdown-menu > li > a.active:hover { color: var(--zero-link); background: rgba(26, 94, 156, .08); }
+
+/* ---- search box: match the bright base green to the Conn box olive ------ */
+.navbar-form .form-control, #search { background-color: #597338 !important; }

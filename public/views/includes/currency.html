@@ -10,9 +10,13 @@
   </li>
   <li>
   <a data-ng-click="setCurrency('m'+currency.netSymbol)" data-ng-class="{active: currency.symbol == ('m'+currency.netSymbol)}">m{{currency.netSymbol}}</a>
-  </li> 
+  </li>
   <li>
   <a data-ng-click="setCurrency('bits')" data-ng-class="{active: currency.symbol == 'bits'}">bits</a>
   </li>
+  <li class="divider"></li>
+  <li>
+    <small style="padding-left:20px" class="text-muted" data-ng-show="currency.factor">factor: {{currency.factor}}</small>
+    <small style="padding-left:20px" class="text-danger" data-ng-show="!currency.factor"><span class="glyphicon glyphicon-warning-sign"></span> no price feed</small>
+  </li>
 </ul>
-
