@@ -118,8 +118,8 @@
             <td translate>Proxy setting</td>
             <td class="text-right">{{info.proxy}}</td>
           </tr>
-          <tr>
-            <td translate>Info Errors</td>
+          <tr data-ng-show="info.errors && info.errors.indexOf('blocks received in the last') === -1">
+            <td translate>Warnings</td>
             <td class="text-right">{{info.errors}}</td>
           </tr>
         </tbody>
