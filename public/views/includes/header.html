@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="insight navbar-brand" href="."><img data-ng-src="img/logo.svg" alt="Zero" style="height:22px"></a>
+      <a class="insight navbar-brand" href=".">Zero</a>
     </div>
     <div class="navbar-collapse collapse" collapse="$root.isCollapsed">
       <ul class="nav navbar-nav">
@@ -24,7 +24,7 @@
               <span  class="glyphicon glyphicon-warning-sign"></span>
               ERROR
           </span>
-          <span class="t" tooltip="{{sync.syncedBlocks}} / {{sync.blockChainHeight}} synced. {{sync.skippedBlocks || 0}} skipped" tooltip-placement="bottom" data-ng-show="sync.status==='syncing'">
+          <span class="t" tooltip="{{sync.syncPercentage}}% — height {{sync.blockChainHeight}}" tooltip-placement="bottom" data-ng-show="sync.status==='syncing'">
             <span  class="glyphicon glyphicon-refresh icon-rotate"></span>
             {{sync.syncPercentage}}%
           </span>
@@ -32,13 +32,9 @@
         </div>
         &nbsp; &middot;
         <span data-ng-init="getStatus('Info')">
-          <strong>{{'Conn'|translate}}</strong>
-          <span class="label" data-ng-class="info.connections > 0 ? 'label-success' : 'label-danger'">{{info.connections}}</span>
+          <strong>{{'Conn'|translate}}</strong> {{info.connections}}
         </span> &middot;
         <strong>{{'Height'|translate}}</strong> {{totalBlocks || info.blocks}}
-        &middot;
-        <span class="label"
-              data-ng-class="sync.error ? 'label-danger' : (sync.status === 'finished' ? 'label-success' : 'label-warning')">{{sync.status}}</span>
       </div>
       </li>
       <li>
