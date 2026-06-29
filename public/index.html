@@ -6,11 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="fragment" content="!">
-	<title data-ng-if="currency.testnet" data-ng-bind="$root.title + $root.titleDetail + ' | Testnet Zero Insight'">Testnet Zero Insight</title>
 	<title data-ng-if="!currency.testnet" data-ng-bind="$root.title + $root.titleDetail + ' | Zero Insight'">Zero Insight</title>
+	<title data-ng-if="currency.testnet" data-ng-bind="$root.title + $root.titleDetail + ' | Testnet Zero Insight'">Testnet Zero Insight</title>
 	<meta name="keywords" content="zero, transactions, blocks, address, block chain, best block, mining difficulty, hash serialized">
-	<meta data-ng-if="currency.testnet" name="description" content="Zero Insight. View detailed information on all testnet zero transactions and block. {{ $root.title + $root.titleDetail }}">
 	<meta data-ng-if="!currency.testnet" name="description" content="Zero Insight. View detailed information on all zero transactions and block. {{ $root.title + $root.titleDetail }}">
+	<meta data-ng-if="currency.testnet" name="description" content="Zero Insight. View detailed information on all testnet zero transactions and block. {{ $root.title + $root.titleDetail }}">
 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 	<!-- SAMPLE (favicon): sized PNG icons; modern browsers pick by size, the
 	     .ico above stays as a legacy fallback. Files staged in samples/img/icons/,
